@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<center>
+		<h1>Grade Calculator
+		</center>
+		<script>
+		function grade(i){
+			classworks = "s"+i+"cw";
+			labworks = "s"+i+"lw";
+			projectreview = "s"+i+"pr";
+			projectfinal = "s"+i+"pf";
+			total = "s"+i+"t";
+			finalletter = "final"+i;
+			document.getElementById(total).value = ((document.getElementById(classworks).value* .25) + (document.getElementById(labworks).value * .50) + (document.getElementById(projectreview).value * .15) + (document.getElementById(projectfinal).value * .10));
+			if(document.getElementById(total).value >= 93){
+				document.getElementById(finalletter).value = "A";
+			}else if((document.getElementById(total).value < 93)&& (document.getElementById(total).value >= 90)){
+				document.getElementById(finalletter).value = "A-";
+			}else if((document.getElementById(total).value < 90)&& (document.getElementById(total).value >= 87)){
+				document.getElementById(finalletter).value = "B+";
+			}else if((document.getElementById(total).value < 87)&& (document.getElementById(total).value >= 83)){
+				document.getElementById(finalletter).value = "B";
+			}else if((document.getElementById(total).value < 83)&& (document.getElementById(total).value >= 80)){
+				document.getElementById(finalletter).value = "B-";
+			}else if((document.getElementById(total).value < 80)&& (document.getElementById(total).value >= 77)){
+				document.getElementById(finalletter).value = "C+";
+			}else if((document.getElementById(total).value < 77)&& (document.getElementById(total).value >= 73)){
+				document.getElementById(finalletter).value = "C";
+			}else if((document.getElementById(total).value < 73)&& (document.getElementById(total).value >= 70)){
+				document.getElementById(finalletter).value = "C-";
+			}else if((document.getElementById(total).value < 70)&& (document.getElementById(total).value >= 67)){
+				document.getElementById(finalletter).value = "D";
+			}else if((document.getElementById(total).value < 67)&& (document.getElementById(total).value >= 60)){
+				document.getElementById(finalletter).value = "D-";
+			}else{
+				document.getElementById(finalletter).value = "F";
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<table border="1" align="center" width="60%">
+	<tr>
+		<td align="center">First Name</td>
+		<td align="center">Last Name</td>
+		<td align="center">Email</td>
+		<td align="center">Class Works 25</td>
+		<td align="center">Lab Works</td>
+		<td align="center">Project Reviews</td>
+		<td align="center">Project Finals</td>
+		<td align="center">Total</td>
+		<td align="center">Grade</td>
+		<td align="center">Letter Grade</td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 1</td>
+		<td>Student1@asd20.org</td>
+		<td><input type="text" name="s1cw" id="s1cw" size=8/></td>
+		<td><input type="text" name="s1lw" id="s1lw" size=8/></td>
+		<td><input type="text" name="s1pr" id="s1pr" size=8/></td>
+		<td><input type="text" name="s1pf" id="s1pf" size=8/></td>
+		<td><input type="text" name="s1t" id="s1t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(1)">Grade</button></td>
+		<td><input type="text" name="final1" id="final1" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 2</td>
+		<td>Student2@asd20.org</td>
+		<td><input type="text" name="s2cw" id="s2cw" size=8/></td>
+		<td><input type="text" name="s2lw" id="s2lw" size=8/></td>
+		<td><input type="text" name="s2pr" id="s2pr" size=8/></td>
+		<td><input type="text" name="s2pf" id="s2pf" size=8/></td>
+		<td><input type="text" name="s2t" id="s2t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(2)" >Grade</button></td>
+		<td><input type="text" name="final2" id="final2" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 3</td>
+		<td>Student3@asd20.org</td>
+		<td><input type="text" name="s3cw" id="s3cw" size=8/></td>
+		<td><input type="text" name="s3lw" id="s3lw" size=8/></td>
+		<td><input type="text" name="s3pr" id="s3pr" size=8/></td>
+		<td><input type="text" name="s3pf" id="s3pf" size=8/></td>
+		<td><input type="text" name="s3t" id="s3t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(3)">Grade</button></td>
+		<td><input type="text" name="final3" id="final3" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 4</td>
+		<td>Student4@asd20.org</td>
+		<td><input type="text" name="s4cw" id="s4cw" size=8/></td>
+		<td><input type="text" name="s4lw" id="s4lw" size=8/></td>
+		<td><input type="text" name="s4pr" id="s4pr" size=8/></td>
+		<td><input type="text" name="s4pf" id="s4pf" size=8/></td>
+		<td><input type="text" name="s4t" id="s4t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(4)">Grade</button></td>
+		<td><input type="text" name="final4" id="final4" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 5</td>
+		<td>Student5@asd20.org</td>
+		<td><input type="text" name="s5cw" id="s5cw" size=8/></td>
+		<td><input type="text" name="s5lw" id="s5lw" size=8/></td>
+		<td><input type="text" name="s5pr" id="s5pr" size=8/></td>
+		<td><input type="text" name="s5pf" id="s5pf" size=8/></td>
+		<td><input type="text" name="s5t" id="s5t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(5)">Grade</button></td>
+		<td><input type="text" name="final5" id="final5" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 6</td>
+		<td>Student6@asd20.org</td>
+		<td><input type="text" name="s6cw" id="s6cw" size=8/></td>
+		<td><input type="text" name="s6lw" id="s6lw" size=8/></td>
+		<td><input type="text" name="s6pr" id="s6pr" size=8/></td>
+		<td><input type="text" name="s6pf" id="s6pf" size=8/></td>
+		<td><input type="text" name="s6t" id="s6t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(6)">Grade</button></td>
+		<td><input type="text" name="final6" id="final6" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 7</td>
+		<td>Student7@asd20.org</td>
+		<td><input type="text" name="s7cw" id="s7cw" size=8/></td>
+		<td><input type="text" name="s7lw" id="s7lw" size=8/></td>
+		<td><input type="text" name="s7pr" id="s7pr" size=8/></td>
+		<td><input type="text" name="s7pf" id="s7pf" size=8/></td>
+		<td><input type="text" name="s7t" id="s7t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(7)">Grade</button></td>
+		<td><input type="text" name="final7" id="final7" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 8</td>
+		<td>Student8@asd20.org</td>
+		<td><input type="text" name="s8cw" id="s8cw" size=8/></td>
+		<td><input type="text" name="s8lw" id="s8lw" size=8/></td>
+		<td><input type="text" name="s8pr" id="s8pr" size=8/></td>
+		<td><input type="text" name="s8pf" id="s8pf" size=8/></td>
+		<td><input type="text" name="s8t" id="s8t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(8)">Grade</button></td>
+		<td><input type="text" name="final8" id="final8" size=2/></td>
+	</tr>
+		<tr>
+		<td>Student</td>
+		<td>Number 9</td>
+		<td>Student9@asd20.org</td>
+		<td><input type="text" name="s9cw" id="s9cw" size=8/></td>
+		<td><input type="text" name="s9lw" id="s9lw" size=8/></td>
+		<td><input type="text" name="s9pr" id="s9pr" size=8/></td>
+		<td><input type="text" name="s9pf" id="s9pf" size=8/></td>
+		<td><input type="text" name="s9t" id="s9t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(9)">Grade</button></td>
+		<td><input type="text" name="final9" id="final9" size=2/></td>
+	</tr>
+	<tr>
+		<td>Student</td>
+		<td>Number 10</td>
+		<td>Student10@asd20.org</td>
+		<td><input type="text" name="s10cw" id="s10cw" size=8/></td>
+		<td><input type="text" name="s10lw" id="s10lw" size=8/></td>
+		<td><input type="text" name="s10pr" id="s10pr" size=8/></td>
+		<td><input type="text" name="s10pf" id="s10pf" size=8/></td>
+		<td><input type="text" name="s10t" id="s10t" size=8/></td>
+		<td><button name="grade" id = "grade" onclick="javascript:grade(10)">Grade</button></td>
+		<td><input type="text" name="final10" id="final10" size=2/></td>
+	</tr>
+	</body>
+</html>
